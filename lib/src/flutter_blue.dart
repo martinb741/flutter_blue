@@ -25,7 +25,7 @@ class FlutterBlue {
   static FlutterBlue get instance => _instance;
 
   /// Log level of the instance, default is all messages (debug).
-  LogLevel _logLevel = LogLevel.error;
+  LogLevel _logLevel = LogLevel.debug;
   LogLevel get logLevel => _logLevel;
 
   /// Checks whether the device supports Bluetooth
