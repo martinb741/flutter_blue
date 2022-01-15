@@ -989,7 +989,7 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
 
     private void log(LogLevel level, String message) {
         if(level.ordinal() <= logLevel.ordinal()) {
-            Log.d(TAG, String.format('Logging message because message level %s is lower than or equal to log level %s.', level, logLevel));
+            Log.d(TAG, String.format("Logging message because message level %s is lower than or equal to log level %s.", level, logLevel));
             Log.d(TAG, message);
         }
     }
