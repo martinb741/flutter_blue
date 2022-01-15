@@ -14,6 +14,7 @@ class FlutterBlue {
 
   /// Singleton boilerplate
   FlutterBlue._() {
+    print('FlutterBlue begins.');
     _channel.setMethodCallHandler((MethodCall call) async {
       _methodStreamController.add(call);
     });
