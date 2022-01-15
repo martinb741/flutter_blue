@@ -193,6 +193,8 @@ class FlutterBlue {
 
   void _log(LogLevel level, String message) {
     if (level.index <= _logLevel.index) {
+      print('Printing log message because message level $level is lower than '
+          'or equal to log level $logLevel.');
       print(message);
     }
   }
