@@ -163,14 +163,14 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                 activityBinding.addRequestPermissionsResultListener(this);
             }
         }
-        Log.i("Debug Loggable:");
-        Log.i(TAG + ": " + Log.isLoggable(TAG, Log.DEBUG));
-        Log.i("DUMMY: " + Log.isLoggable("DUMMY", Log.DEBUG));
-        Log.i("BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.DEBUG));
-        Log.i("Error Loggable:");
-        Log.i(TAG + ": " + Log.isLoggable(TAG, Log.ERROR));
-        Log.i("DUMMY: " + Log.isLoggable("DUMMY", Log.ERROR));
-        Log.i("BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.ERROR));
+        Log.i(TAG, "Debug Loggable:");
+        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.DEBUG));
+        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.DEBUG));
+        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.DEBUG));
+        Log.i(TAG, "Error Loggable:");
+        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.ERROR));
+        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.ERROR));
+        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.ERROR));
     }
 
     private void tearDown() {
