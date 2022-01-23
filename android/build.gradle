@@ -36,6 +36,12 @@ android {
             }
         }
     }
+    buildTypes {
+        debug {
+            debuggable false
+            buildConfigField "Boolean", "DEBUG_MODE", "false"
+        }
+    }
 }
 
 protobuf {
