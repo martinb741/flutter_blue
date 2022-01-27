@@ -164,20 +164,31 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
             }
         }
 
-        Log.i(TAG, "a");
+        Log.i(TAG, "b");
 
-        System.setProperty("log.tag." + TAG, "ERROR");
-        System.setProperty("log.tag.DUMMY", "ERROR");
-        System.setProperty("log.tag.BluetoothAdapter", "ERROR");
+        List<String> tags = new ArrayList<String>();
+        tags.add("BluetoothGatt");
+        tags.add("vndksupport");
+        tags.add("BluetoothAdapter");
+        tags.add("BluetoothLeScanner");
+        tags.add("FlutterBluePlugin");
+        tags.add("Adreno-EGL");
+        tags.add("BluetoothManager");
 
-        Log.i(TAG, "Debug Loggable:");
-        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.DEBUG));
-        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.DEBUG));
-        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.DEBUG));
-        Log.i(TAG, "Error Loggable:");
-        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.ERROR));
-        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.ERROR));
-        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.ERROR));
+        for (String tag : tags) {
+            System.setProperty("log.tag." + tag, "SUPPRESS");
+        }
+//        System.setProperty("log.tag.DUMMY", "ERROR");
+//        System.setProperty("log.tag.BluetoothAdapter", "ERROR");
+//
+//        Log.i(TAG, "Debug Loggable:");
+//        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.DEBUG));
+//        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.DEBUG));
+//        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.DEBUG));
+//        Log.i(TAG, "Error Loggable:");
+//        Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.ERROR));
+//        Log.i(TAG, "DUMMY: " + Log.isLoggable("DUMMY", Log.ERROR));
+//        Log.i(TAG, "BluetoothAdapter: " + Log.isLoggable("BluetoothAdapter", Log.ERROR));
     }
 
     private void tearDown() {
