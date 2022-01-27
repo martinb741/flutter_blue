@@ -164,7 +164,7 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
             }
         }
 
-        Log.i("a");
+        Log.i(TAG, "a");
 
         System.setProperty("log.tag." + TAG, "ERROR");
         System.setProperty("log.tag.DUMMY", "ERROR");
