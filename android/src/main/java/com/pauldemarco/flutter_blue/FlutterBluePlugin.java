@@ -164,9 +164,11 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
             }
         }
 
-        System.setProperty("log.tag." + TAG, "SUPPRESS");
-        System.setProperty("log.tag.DUMMY", "SUPPRESS");
-        System.setProperty("log.tag.BluetoothAdapter", "SUPPRESS");
+        Log.i("a");
+
+        System.setProperty("log.tag." + TAG, "ERROR");
+        System.setProperty("log.tag.DUMMY", "ERROR");
+        System.setProperty("log.tag.BluetoothAdapter", "ERROR");
 
         Log.i(TAG, "Debug Loggable:");
         Log.i(TAG, TAG + ": " + Log.isLoggable(TAG, Log.DEBUG));
